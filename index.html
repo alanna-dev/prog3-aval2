@@ -15,7 +15,7 @@
   <section class="section--candidate" id="consultaCandidato">
       <h2>Consulta por Candidato</h2>
       <label for="candidatoInput">Nome do Candidato:</label>
-      <input type="text" id="candidatoInput" placeholder="Digite o nome do candidato">
+      <input class="input--candidate" type="text" id="candidatoInput" placeholder="Digite o nome do candidato">
       <button id="consultarCandidatoBtn">Consultar</button>
       <div id="resultadoContainer"></div>
   </section>
@@ -23,8 +23,7 @@
   <section class="section--position" id="consultaCargo">
       <h2>Consulta por Cargo</h2>
       <label for="cargoSelect">Selecione o Cargo:</label>
-      <select id="cargoSelect">
-      </select>
+      <select id="cargoSelect"></select>
       <button id="consultarCargoBtn">Consultar</button>
       <div id="resultadoCargoContainer"></div>
   </section>
@@ -32,8 +31,7 @@
   <section class="section--city" id="consultaMunicipio">
       <h2>Consulta por Município</h2>
       <label for="municipioSelect">Selecione o Município:</label>
-      <select id="municipioSelect">
-      </select>
+      <select id="municipioSelect"></select>
       <button id="consultarMunicipioBtn">Consultar</button>
       <div id="resultadoMunicipioContainer"></div>
   </section>
@@ -41,7 +39,8 @@
   <section class="section--general" id="resultadoGeral">
       <h2>Resultado Geral</h2>
       <label>
-          <input type="checkbox" id="eleitosCheckbox"> Mostrar Apenas Eleitos
+          <input type="checkbox" id="eleitosCheckbox">
+          Mostrar Apenas Eleitos
       </label>
       <button id="consultarGeralBtn">Consultar</button>
       <div id="resultadoGeralContainer"></div>
