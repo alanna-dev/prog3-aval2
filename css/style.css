@@ -6,8 +6,9 @@ body {
 }
 
 section {
-    display: grid;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 1rem;
     margin: 2rem;
     background-color: white;
@@ -25,9 +26,19 @@ section label {
     font-size: 16px;
 }
 
-section input {
+.input--candidate {
+    width: 14rem;
     margin-bottom: 16px;
     padding: 8px;
 }
 
-section select 
+section select {
+    width: 12rem;
+    margin-bottom: 16px;
+}
+
+section button {
+    width: 10rem;
+    height: 2rem;
+}
+
