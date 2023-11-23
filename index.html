@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Eleições</title>
+</head>
+<body>
+
+  <header>
+      <h1>Consulta Eleições Gerais 2022 - Piauí</h1>
+  </header>
+
+  <section id="consultaCandidato">
+      <h2>Consulta por Candidato</h2>
+      <label for="candidatoInput">Nome do Candidato:</label>
+      <input type="text" id="candidatoInput" placeholder="Digite o nome do candidato">
+      <button id="consultarCandidatoBtn">Consultar</button>
+      <div id="resultadoContainer"></div>
+  </section>
+
+  <section id="consultaCargo">
+      <h2>Consulta por Cargo</h2>
+      <label for="cargoSelect">Selecione o Cargo:</label>
+      <select id="cargoSelect">
+      </select>
+      <button id="consultarCargoBtn">Consultar</button>
+      <div id="resultadoCargoContainer"></div>
+  </section>
+
+  <section id="consultaMunicipio">
+      <h2>Consulta por Município</h2>
+      <label for="municipioSelect">Selecione o Município:</label>
+      <select id="municipioSelect">
+      </select>
+      <button id="consultarMunicipioBtn">Consultar</button>
+      <div id="resultadoMunicipioContainer"></div>
+  </section>
+
+  <section id="resultadoGeral">
+      <h2>Resultado Geral</h2>
+      <label>
+          <input type="checkbox" id="eleitosCheckbox"> Mostrar Apenas Eleitos
+      </label>
+      <button id="consultarGeralBtn">Consultar</button>
+      <div id="resultadoGeralContainer"></div>
+  </section>
+
+  <footer>
+      <p>Autores: Alanna Farias e Graziela</p>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
