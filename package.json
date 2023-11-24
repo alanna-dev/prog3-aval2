@@ -1,12 +1,15 @@
 {
-  "name": "trabalho-js",
+  "name": "trabalho",
   "version": "1.0.0",
   "description": "trabalho final de programacao iii",
-  "main": "index.js",
+  "main":"index.js" ,
   "scripts": {
+    "start": "node server.cjs",
+    "dev": "server.cjs",
     "test": "test init"
   },
-  "author": "",
+  "type": "module",
+  "author": "alanna, grazi",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
