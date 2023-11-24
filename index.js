@@ -46,7 +46,6 @@ function createSelectOptions(data, elementId) {
 }
 
 function getCandidatesByName() {
-  // obter o nome do candidato digitado pelo usuario
   const inputValue = document.getElementById('name').value;
 
   fetch(`${api}/name?search=${inputValue}`)

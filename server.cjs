@@ -19,6 +19,8 @@ app.use('/css', express.static(__dirname + '/css'));
 
 app.use('/js', express.static(__dirname + '/index.js'));
 
+app.use(express.static(__dirname));
+
 app.use(express.static('public'));
 
 function formatedRes(rows) {
@@ -49,17 +51,15 @@ app.get('/name', (req, res) => {
   });
 });
 
-app.get('/role/:cargoId', (req, res) => {
-  const query = `
-    select cand_nome, cand_votos, cand_status from votos_cand_estado where cargo_id = ?
-  `;
+app.get('/role', (req, res) => {
+  const query = `select * from cargo order by nome`
 
-  db.all(query, [req.params.cargoId], (err, rows) => {
+  db.all(query, (err, rows) => {
     if (err) {
       throw Error(err.message);
     }
 
-    res.json(formatedRes(rows))
+    res.json(rows)
   });
 });
 
@@ -90,7 +90,7 @@ app.get('/city', (req, res) => {
 });
 
 app.get('/cities', (req, res) => {
-  const query = `select id, nome do município ordene por nome`;
+  const query = `select id, nome from municipio order by nome`;
 
   db.all(query, (err, rows) => {
     if (err) {
@@ -119,5 +119,5 @@ app.get('/candidates/:onlyElecteds', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Listening at port ${port}`);
+  console.log(`Servidor rodando em http://localhost:${port}`);
 });
