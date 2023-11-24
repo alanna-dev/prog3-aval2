@@ -1,55 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Eleições</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Eleições 2022</title>
 </head>
 <body>
-
-  <header>
-      <h1>Consulta Eleições Gerais 2022 - Piauí</h1>
-  </header>
-
-  <section class="section--candidate" id="consultaCandidato">
-      <h2>Consulta por Candidato</h2>
-      <label for="candidatoInput">Nome do Candidato:</label>
-      <input class="input--candidate" type="text" id="candidatoInput" placeholder="Digite o nome do candidato">
-      <button id="consultarCandidatoBtn">Consultar</button>
-      <div id="resultadoContainer"></div>
-  </section>
-
-  <section class="section--position" id="consultaCargo">
-      <h2>Consulta por Cargo</h2>
-      <label for="cargoSelect">Selecione o Cargo:</label>
-      <select id="cargoSelect"></select>
-      <button id="consultarCargoBtn">Consultar</button>
-      <div id="resultadoCargoContainer"></div>
-  </section>
-
-  <section class="section--city" id="consultaMunicipio">
-      <h2>Consulta por Município</h2>
-      <label for="municipioSelect">Selecione o Município:</label>
-      <select id="municipioSelect"></select>
-      <button id="consultarMunicipioBtn">Consultar</button>
-      <div id="resultadoMunicipioContainer"></div>
-  </section>
-
-  <section class="section--general" id="resultadoGeral">
-      <h2>Resultado Geral</h2>
-      <label>
-          <input type="checkbox" id="eleitosCheckbox">
-          Mostrar Apenas Eleitos
-      </label>
-      <button id="consultarGeralBtn">Consultar</button>
-      <div id="resultadoGeralContainer"></div>
-  </section>
-
-  <footer>
-      <p>Autores: Alanna Farias e Graziela</p>
-  </footer>
-
-  <script src="/js/main.js"></script>
+  <h1>Eleições 2022</h1>
+  <label for="name">Candidato</label>
+  <input type="text" id="name" name="name" oninput="getCandidatesByName()">
+  <br>
+  <label for="role">Cargo</label>
+  <select name="role" id="role" onchange="getCandidatesByposition()"></select>
+  <br>
+  <label for="city">Município</label>
+  <select name="city" id="city" onchange="getCandidatesByCity()"></select>
+  <br>
+  <label for="elected">Eleitos e Não Eleitos</label>
+  <select name="elected" id="elected" onchange="getAllOrElectedOnly()">
+    <option value="0">Não-Eleitos</option>
+    <option value="1">Eleitos</option>
+  </select>
+  <div id="res"></div>
+  <br>
+  <script src="index.js"></script>
 </body>
 </html>
